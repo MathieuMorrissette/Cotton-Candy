@@ -28,9 +28,11 @@ https://releases.linaro.org/archive/12.04/components/toolchain/binaries/gcc-lina
 Use ubuntu 11.04 AMD64
 
 To compile this do the following:
-$ CROSS_COMPILE=arm-linux-gnueabi- make distclean
-$ CROSS_COMPILE=arm-linux-gnueabi- make smdkv310_config
-$ CROSS_COMPILE=arm-linux-gnueabi- make
+```
+CROSS_COMPILE=arm-linux-gnueabi- make distclean
+CROSS_COMPILE=arm-linux-gnueabi- make smdkv310_config
+CROSS_COMPILE=arm-linux-gnueabi- make
 
-$ cd sd_fuse
-$ sudo ./c210-fusing.sh /dev/sdb // write the boot loader to the sd card
+cd sd_fuse
+sudo ./c210-fusing.sh /dev/sdb // write the boot loader to the sd card
+```
