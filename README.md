@@ -21,7 +21,7 @@ https://drive.google.com/drive/folders/1AnvkNviNJQAPcr22hA5KKuxfPzFRKb2M?usp=sha
 
 # Compile U-Boot with
 
-https://releases.linaro.org/archive/12.04/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabi-2012.04-20120426_linux.tar.bz2
+https://releases.linaro.org/archive/12.04/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabi-2012.04-20120426_linux.tar.bz2 (available in google drive if no longer available)
 
 Use ubuntu 11.04 AMD64
 
@@ -31,4 +31,4 @@ $ CROSS_COMPILE=arm-linux-gnueabi- make smdkv310_config
 $ CROSS_COMPILE=arm-linux-gnueabi- make
 
 $ cd sd_fuse
-$ sudo ./c210-fusing.sh /dev/sdb
+$ sudo ./c210-fusing.sh /dev/sdb // write the boot loader to the sd card
