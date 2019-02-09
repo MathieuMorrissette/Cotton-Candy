@@ -1,4 +1,6 @@
-# Cotton-Candy
+# Cotton-Candy Research
+
+It uses Samsung Exynos 4210 Soc which is ArmV7-A
 
 https://web.archive.org/web/20190209034644/https://sites.google.com/site/tingox/cotton_candy
 
