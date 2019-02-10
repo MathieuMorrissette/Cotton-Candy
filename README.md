@@ -53,6 +53,16 @@ cd sd_fuse
 sudo ./c210-fusing.sh /dev/sdb // write the boot loader to the sd card
 ```
 
+# Compiling Kernel
+
+```
+export ARCH=arm
+
+CROSS_COMPILE=arm-linux-gnueabi- make distclean
+CROSS_COMPILE=arm-linux-gnueabi- make fxi_c210_ubuntu_defconfig
+CROSS_COMPILE=arm-linux-gnueabi- make
+```
+
 
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4
