@@ -52,3 +52,7 @@ CROSS_COMPILE=arm-linux-gnueabi- make
 cd sd_fuse
 sudo ./c210-fusing.sh /dev/sdb // write the boot loader to the sd card
 ```
+
+
+## Source
+https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4
