@@ -63,6 +63,13 @@ CROSS_COMPILE=arm-linux-gnueabi- make fxi_c210_ubuntu_defconfig
 CROSS_COMPILE=arm-linux-gnueabi- make
 ```
 
+if you get perl error such as https://web.archive.org/web/20190210004339/https://lkml.org/lkml/2012/11/18/159
+```
+Can't use 'defined(@array)' (Maybe you should just omit the defined()?) at kernel/timeconst.pl line 373.
+```
+Replace defined(@array) by !@val
+
+
 
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4
