@@ -88,6 +88,11 @@ dropbear -v -s -g -r /data/dropbear/dropbear_rsa_host_key -d /data/dropbear/drop
 
 ssh root@ip
 
+doesnt seems to work will try compiing termux openssh (event if termux doesnt officially support android 4)
+
+./scripts/run-docker.sh ./build-package.sh -a arm openssh
+
+
 
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4 for the base image
