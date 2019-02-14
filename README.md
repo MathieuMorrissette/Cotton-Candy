@@ -77,6 +77,14 @@ Replace defined(@array) by !@val
 Binary is available in google drive
 transfer it using adb
 
+# Installing dropbear
+Binaries available in google drive (from ssh droid)
+
+https://dtbaker.net/blog/random-bits/2013/04/howto-enable-ssh-on-android-and-network-adb/
+
+dropbear -v -s -g -r /data/dropbear/dropbear_rsa_host_key
+
+not sure where to specify authorized keys yet
 
 
 ## Source
