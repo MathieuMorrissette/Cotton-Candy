@@ -70,6 +70,14 @@ Can't use 'defined(@array)' (Maybe you should just omit the defined()?) at kerne
 Replace defined(@array) by !@val
 
 
+# Android
+
+# Installing Busybox
+
+Binary is available in google drive
+transfer it using adb
+
+
 
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4 for the base image
