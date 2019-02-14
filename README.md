@@ -82,7 +82,7 @@ Binaries available in google drive (from ssh droid)
 
 https://dtbaker.net/blog/random-bits/2013/04/howto-enable-ssh-on-android-and-network-adb/
 
-dropbear -v -s -g -r /data/dropbear/dropbear_rsa_host_key
+dropbear -v -s -g -r /data/dropbear/dropbear_rsa_host_key -d /data/dropbear/dropbear_dss_host_key
 
 /data/data/berserker.android.apps.sshdroid/home/.ssh/authorized_keys (chmod 777 it )
 
