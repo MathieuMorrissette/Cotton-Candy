@@ -75,6 +75,8 @@ Replace defined(@array) by !@val
 https://dan.drown.org/android/
 https://dan.drown.org/android/howto/ssh-server.html
 
+ln -s /system/bin/sh /system/xbin/ash
+
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4 for the base image
 https://fredericb.info/2018/03/emulating-exynos-4210-bootrom-in-qemu.html
