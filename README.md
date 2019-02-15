@@ -77,6 +77,32 @@ https://dan.drown.org/android/howto/ssh-server.html
 
 ln -s /system/bin/sh /system/xbin/ash
 
+## run ssh at boot
+add this to /init.rc
+
+
+just above
+
+```
+## Daemon processes to be run by init.
+##
+```
+
+add 
+
+```
+on property:sys.boot_completed=1
+    start dropbear
+```
+
+at the end add
+```
+# dropbear
+service dropbear /data/local/bin/dropbear
+    user root
+    oneshot
+```
+
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4 for the base image
 https://fredericb.info/2018/03/emulating-exynos-4210-bootrom-in-qemu.html
