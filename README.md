@@ -70,29 +70,10 @@ Can't use 'defined(@array)' (Maybe you should just omit the defined()?) at kerne
 Replace defined(@array) by !@val
 
 
-# Android
+# Android Installing SSH
 
-# Installing Busybox
-
-Binary is available in google drive
-transfer it using adb
-
-# Installing dropbear
-Binaries available in google drive (from ssh droid)
-
-https://dtbaker.net/blog/random-bits/2013/04/howto-enable-ssh-on-android-and-network-adb/
-
-dropbear -v -s -g -r /data/dropbear/dropbear_rsa_host_key -d /data/dropbear/dropbear_dss_host_key
-
-/data/data/berserker.android.apps.sshdroid/home/.ssh/authorized_keys (chmod 777 it )
-
-ssh root@ip
-
-doesnt seems to work will try compiing termux openssh (event if termux doesnt officially support android 4)
-
-./scripts/run-docker.sh ./build-package.sh -a arm openssh
-
-
+https://dan.drown.org/android/
+https://dan.drown.org/android/howto/ssh-server.html
 
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4 for the base image
