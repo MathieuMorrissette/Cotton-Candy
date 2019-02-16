@@ -98,6 +98,11 @@ service ssh-p2p /system/bin/sh /data/chroot/setupsshp2p.sh
 service dropbear /data/local/bin/dropbear
     user root
     oneshot
+    
+# sshd 
+service sshd /system/bin/sh /data/chroot/setupsshd.sh
+   user root
+   oneshot
 ```
 
 setupchroot.sh
@@ -115,6 +120,12 @@ setupsshp2p.sh
 #!/system/bin/sh
 /system/bin/chroot /data/chroot/ /data/go/bin/ssh-p2p server -key="key" -dial="127.0.0.1:22"
 ```
+setupsshd.sh
+```
+#!/system/bin/sh
+
+/system/bin/chroot /data/chroot/ /sbin/sshd
+```
 
 ### Start Services on Boot
 
@@ -130,6 +141,7 @@ add the following handler :
 on property:sys.boot_completed=1
     start archlinux
     start dropbear
+    start sshd
     start sshp2p
 ```
 
