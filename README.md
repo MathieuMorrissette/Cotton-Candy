@@ -110,7 +110,7 @@ https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2
 https://technohackerblog.blogspot.com/2016/07/running-arch-linux-in-chroot-on-android.html
 
 ```
-chroot
+chroot /data/chroot /bin/bash
 
 /bin/sh -c "haveged -w 1024; pacman-key --init; pkill haveged
 ```
