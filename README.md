@@ -122,6 +122,33 @@ https://github.com/MathieuMorrissette/ssh-p2p
 (run server in cotton candy)
 
 ### to start server on boot
+init.rc
+``` 
+# p2p ssh
+service ssh-p2p chroot /data/chroot/ ~/go/bin/ssh-p2p server -key="guid" -dial="127.0.0.1:22"
+```
+
+add this to /init.rc
+
+just above
+
+```
+## Daemon processes to be run by init.
+##
+```
+
+add 
+
+```
+on property:sys.boot_completed=1
+    start dropbear
+    start ssh-p2p
+```
+
+
+### to connect
+ssh-p2p client -key=$KEY -listen=127.0.0.1:2222
+ssh root@127.0.0.1 -p 2222
 
 
 ## Source
