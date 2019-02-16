@@ -126,6 +126,8 @@ init.rc
 ``` 
 # p2p ssh
 service ssh-p2p chroot /data/chroot/ ~/go/bin/ssh-p2p server -key="guid" -dial="127.0.0.1:22"
+    user root
+    oneshot
 ```
 
 add this to /init.rc
