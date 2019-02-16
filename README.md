@@ -115,6 +115,15 @@ chroot /data/chroot /bin/bash
 /bin/sh -c "haveged -w 1024; pacman-key --init; pkill haveged
 ```
 
+## p2p ssh
+
+https://github.com/MathieuMorrissette/ssh-p2p
+
+(run server in cotton candy)
+
+### to start server on boot
+
+
 ## Source
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4 for the base image
 https://fredericb.info/2018/03/emulating-exynos-4210-bootrom-in-qemu.html
