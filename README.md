@@ -80,7 +80,6 @@ ln -s /system/bin/sh /system/xbin/ash
 ## run ssh at boot
 add this to /init.rc
 
-
 just above
 
 ```
@@ -101,6 +100,19 @@ at the end add
 service dropbear /data/local/bin/dropbear
     user root
     oneshot
+```
+
+## install arch linux
+take this
+https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2
+
+
+https://technohackerblog.blogspot.com/2016/07/running-arch-linux-in-chroot-on-android.html
+
+```
+chroot
+
+/bin/sh -c "haveged -w 1024; pacman-key --init; pkill haveged
 ```
 
 ## Source
