@@ -115,6 +115,30 @@ chroot /data/chroot /bin/bash
 /bin/sh -c "haveged -w 1024; pacman-key --init; pkill haveged
 ```
 
+### setup chroot on boot
+
+add this service 
+
+```
+# setup chroot
+service archlinux /system/bin/sh /data/chroot/setupchroot.sh
+    user root
+    oneshot
+```
+
+setupchroot.sh
+```
+#!/system/bin/sh
+mount -o bind /dev/ /data/chroot/dev/
+mount -t proc proc /data/chroot/proc/
+mount -t sysfs sysfs /data/chroot/sys/
+mount -t tmpfs tmpfs /data/chroot/tmp/
+mount -t devpts devpts /data/chroot/dev/pts/
+```
+
+
+and start it before dropbear and ssh-p2p
+
 ## p2p ssh
 
 https://github.com/MathieuMorrissette/ssh-p2p
@@ -125,7 +149,7 @@ https://github.com/MathieuMorrissette/ssh-p2p
 init.rc
 ``` 
 # p2p ssh
-service ssh-p2p chroot /data/chroot/ ~/go/bin/ssh-p2p server -key="guid" -dial="127.0.0.1:22"
+service ssh-p2p /system/bin/chroot /data/chroot/ ~/go/bin/ssh-p2p server -key="guid" -dial="127.0.0.1:22"
     user root
     oneshot
 ```
