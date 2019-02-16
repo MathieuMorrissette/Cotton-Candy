@@ -1,12 +1,8 @@
 # Cotton-Candy Research
 
-It uses Samsung Exynos 4210 Soc which is ArmV7-A
+It uses Samsung Exynos 4210 Soc which is ArmV7-A, It has almost the same specs as the Samsung Origen Board
 
-https://web.archive.org/web/20190209034644/https://sites.google.com/site/tingox/cotton_candy
 
-https://forum.xda-developers.com/showthread.php?t=1661882&page=2
-
-https://github.com/FXITech
 
 Ubuntu-beta-20130309.zip
 
@@ -70,42 +66,22 @@ Can't use 'defined(@array)' (Maybe you should just omit the defined()?) at kerne
 Replace defined(@array) by !@val
 
 
-# Android Installing SSH
+# Android
 
 https://dan.drown.org/android/
 https://dan.drown.org/android/howto/ssh-server.html
 
+Create ash as it is required by ssh
+```
 ln -s /system/bin/sh /system/xbin/ash
-
-## run ssh at boot
-add this to /init.rc
-
-just above
-
-```
-## Daemon processes to be run by init.
-##
 ```
 
-add 
-
-```
-on property:sys.boot_completed=1
-    start dropbear
-```
-
-at the end add
-```
-# dropbear
-service dropbear /data/local/bin/dropbear
-    user root
-    oneshot
-```
-
-## install arch linux
-take this
+### Installing Chroot Arch Linux
+Use the following image :
 https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2
 
+Transfer it to the device with the adb shell 
+and extract it using tar.
 
 https://technohackerblog.blogspot.com/2016/07/running-arch-linux-in-chroot-on-android.html
 
@@ -115,13 +91,23 @@ chroot /data/chroot /bin/bash
 /bin/sh -c "haveged -w 1024; pacman-key --init; pkill haveged
 ```
 
-### setup chroot on boot
+### Create Services On Boot
 
 add this service 
 
 ```
 # setup chroot
 service archlinux /system/bin/sh /data/chroot/setupchroot.sh
+    user root
+    oneshot
+    
+# p2p ssh
+service ssh-p2p /system/bin/sh /data/chroot/setupsshp2p.sh
+    user root
+    oneshot
+    
+# dropbear
+service dropbear /data/local/bin/dropbear
     user root
     oneshot
 ```
@@ -136,41 +122,21 @@ mount -t tmpfs tmpfs /data/chroot/tmp/
 mount -t devpts devpts /data/chroot/dev/pts/
 ```
 
-
-and start it before dropbear and ssh-p2p
-
-## p2p ssh
-
-https://github.com/MathieuMorrissette/ssh-p2p
-
-(run server in cotton candy)
-
-### to start server on boot
-init.rc
-``` 
-# p2p ssh
-service ssh-p2p /system/bin/sh /data/chroot/setupsshp2p.sh
-    user root
-    oneshot
-```
-
-
-add this to /init.rc
-
-just above
-
 setupsshp2p.sh
 ```
 #!/system/bin/sh
 /system/bin/chroot /data/chroot/ /data/go/bin/ssh-p2p server -key="key" -dial="127.0.0.1:22"
 ```
 
+### Start Services on Boot
+
+Just above this in the init.rc file 
 ```
 ## Daemon processes to be run by init.
 ##
 ```
 
-add 
+add the following handler :
 
 ```
 on property:sys.boot_completed=1
@@ -179,13 +145,21 @@ on property:sys.boot_completed=1
     start sshp2p
 ```
 
+# References
 
-### to connect
+## SSH-p2p
+
+https://github.com/MathieuMorrissette/ssh-p2p
+
+
+### To connect
 ssh-p2p client -key=$KEY -listen=127.0.0.1:2222
 ssh root@127.0.0.1 -p 2222
 
 
 ## Source
-https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4 for the base image
 https://fredericb.info/2018/03/emulating-exynos-4210-bootrom-in-qemu.html
 https://lists.gnu.org/archive/html/qemu-devel/2012-09/msg00414.html
+https://web.archive.org/web/20190209034644/https://sites.google.com/site/tingox/cotton_candy
+https://forum.xda-developers.com/showthread.php?t=1661882&page=2
+https://github.com/FXITech
