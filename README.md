@@ -149,14 +149,21 @@ https://github.com/MathieuMorrissette/ssh-p2p
 init.rc
 ``` 
 # p2p ssh
-service ssh-p2p /system/bin/chroot /data/chroot/ ~/go/bin/ssh-p2p server -key="guid" -dial="127.0.0.1:22"
+service ssh-p2p /system/bin/sh /data/chroot/setupsshp2p.sh
     user root
     oneshot
 ```
 
+
 add this to /init.rc
 
 just above
+
+setupsshp2p.sh
+```
+#!/system/bin/sh
+/system/bin/chroot /data/chroot/ /data/go/bin/ssh-p2p server -key="key" -dial="127.0.0.1:22"
+```
 
 ```
 ## Daemon processes to be run by init.
@@ -167,8 +174,9 @@ add
 
 ```
 on property:sys.boot_completed=1
+    start archlinux
     start dropbear
-    start ssh-p2p
+    start sshp2p
 ```
 
 
