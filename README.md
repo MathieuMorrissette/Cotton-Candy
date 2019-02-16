@@ -2,22 +2,10 @@
 
 It uses Samsung Exynos 4210 Soc which is ArmV7-A, It has almost the same specs as the Samsung Origen Board
 
+# Linux
 
 
-Ubuntu-beta-20130309.zip
-
-http://linux-exynos.org/wiki/Main_Page
-
-## down
-http://s3.amazonaws.com/ubuntu_test/cc_ubuntu_2014_01_28.img.zip
-
-https://web.archive.org/web/20140612054004/http://download.cstick.com:80/categories/linux_releases
-
-https://drive.google.com/drive/folders/1AnvkNviNJQAPcr22hA5KKuxfPzFRKb2M?usp=sharing
-
-
-
-# Compile U-Boot with
+## Compile U-Boot
 
 https://releases.linaro.org/archive/12.04/components/toolchain/binaries/gcc-linaro-arm-linux-gnueabi-2012.04-20120426_linux.tar.bz2 (available in google drive if no longer available)
 
@@ -49,7 +37,7 @@ cd sd_fuse
 sudo ./c210-fusing.sh /dev/sdb // write the boot loader to the sd card
 ```
 
-# Compiling Kernel
+## Compiling Kernel
 
 ```
 export ARCH=arm
@@ -156,6 +144,8 @@ https://github.com/MathieuMorrissette/ssh-p2p
 ssh-p2p client -key=$KEY -listen=127.0.0.1:2222
 ssh root@127.0.0.1 -p 2222
 
+## Google Drive
+https://drive.google.com/drive/folders/1AnvkNviNJQAPcr22hA5KKuxfPzFRKb2M?usp=sharing
 
 ## Source
 https://fredericb.info/2018/03/emulating-exynos-4210-bootrom-in-qemu.html
@@ -163,3 +153,9 @@ https://lists.gnu.org/archive/html/qemu-devel/2012-09/msg00414.html
 https://web.archive.org/web/20190209034644/https://sites.google.com/site/tingox/cotton_candy
 https://forum.xda-developers.com/showthread.php?t=1661882&page=2
 https://github.com/FXITech
+http://s3.amazonaws.com/ubuntu_test/cc_ubuntu_2014_01_28.img.zip
+https://web.archive.org/web/20140612054004/http://download.cstick.com:80/categories/linux_releases
+http://linux-exynos.org/wiki/Main_Page
+
+# Keywords
+Ubuntu-beta-20130309.zip
