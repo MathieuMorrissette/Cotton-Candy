@@ -149,12 +149,19 @@ https://drive.google.com/drive/folders/1AnvkNviNJQAPcr22hA5KKuxfPzFRKb2M?usp=sha
 
 ## Source
 https://fredericb.info/2018/03/emulating-exynos-4210-bootrom-in-qemu.html
+
 https://lists.gnu.org/archive/html/qemu-devel/2012-09/msg00414.html
+
 https://web.archive.org/web/20190209034644/https://sites.google.com/site/tingox/cotton_candy
+
 https://forum.xda-developers.com/showthread.php?t=1661882&page=2
+
 https://github.com/FXITech
+
 http://s3.amazonaws.com/ubuntu_test/cc_ubuntu_2014_01_28.img.zip
+
 https://web.archive.org/web/20140612054004/http://download.cstick.com:80/categories/linux_releases
+
 http://linux-exynos.org/wiki/Main_Page
 
 # Keywords
