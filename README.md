@@ -103,6 +103,11 @@ service dropbear /data/local/bin/dropbear
 service sshd /system/bin/sh /data/chroot/setupsshd.sh
    user root
    oneshot
+   
+# openvpn
+server openvpn /system/bin/sh /data/chroot/setupopenvpn.sh
+   user root
+   oneshot
 ```
 
 setupchroot.sh
