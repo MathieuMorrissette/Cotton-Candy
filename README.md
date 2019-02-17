@@ -135,7 +135,8 @@ setupsshd.sh
 setupopenvpn.sh
 ```
 #!/system/bin/sh
-
+/system/bin/chroot /data/chroot/ /sbin/mkdir /dev/net
+/system/bin/chroot /data/chroot/ /sbin/mknod /dev/net/tun c 10 200
 /system/bin/chroot /data/chroot/ /sbin/openvpn /home/alarm/VPN-Digital-Ocean/client.ovpn
 ```
 
