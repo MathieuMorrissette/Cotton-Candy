@@ -145,6 +145,16 @@ on property:sys.boot_completed=1
     start sshp2p
 ```
 
+## OpenVPN Client
+
+We must create the tun interface manually with the following commands (in chroot) :
+
+
+```
+sudo mkdir /dev/net
+sudo mknod /dev/net/tun c 10 200
+```
+
 # References
 
 ## SSH-p2p
