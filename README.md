@@ -127,6 +127,13 @@ setupsshd.sh
 /system/bin/chroot /data/chroot/ /sbin/sshd
 ```
 
+setupopenvpn.sh
+```
+#!/system/bin/sh
+
+/system/bin/chroot /data/chroot/ /sbin/openvpn /home/alarm/VPN-Digital-Ocean/client.ovpn
+```
+
 ### Start Services on Boot
 
 Just above this in the init.rc file 
@@ -143,6 +150,7 @@ on property:sys.boot_completed=1
     start dropbear
     start sshd
     start sshp2p
+    start openvpn
 ```
 
 ## OpenVPN Client
