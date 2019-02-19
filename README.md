@@ -36,6 +36,8 @@ CROSS_COMPILE=arm-linux-gnueabi- make
 cd sd_fuse
 sudo ./c210-fusing.sh /dev/sdb // write the boot loader to the sd card
 ```
+if theres fdt redefinition errors when building remove dtc packacge from arch linux
+
 
 ## Compiling Kernel
 
