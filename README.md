@@ -58,6 +58,10 @@ Replace defined(@array) by !@val
 
 # Android
 
+Working android image here :
+https://drive.google.com/open?id=1k0akhT_3AVY5NsnrgXvfsvcU-nAefWP-
+
+
 https://dan.drown.org/android/
 https://dan.drown.org/android/howto/ssh-server.html
 
