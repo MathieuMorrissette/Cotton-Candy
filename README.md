@@ -186,6 +186,8 @@ ssh root@127.0.0.1 -p 2222
 https://drive.google.com/drive/folders/1AnvkNviNJQAPcr22hA5KKuxfPzFRKb2M?usp=sharing
 
 ## Source
+https://www.reddit.com/r/MiniPCs/comments/eoyfbe/anyone_know_where_i_can_redownload_the_cotton/
+
 https://fredericb.info/2018/03/emulating-exynos-4210-bootrom-in-qemu.html
 
 https://lists.gnu.org/archive/html/qemu-devel/2012-09/msg00414.html
@@ -196,11 +198,25 @@ https://forum.xda-developers.com/showthread.php?t=1661882&page=2
 
 https://github.com/FXITech
 
-http://s3.amazonaws.com/ubuntu_test/cc_ubuntu_2014_01_28.img.zip
 
+http://web.archive.org/web/20200221004049/https://sites.google.com/site/tingox/cotton_candy
 https://web.archive.org/web/20140612054004/http://download.cstick.com:80/categories/linux_releases
+http://web.archive.org/web/20200221003638/http://cstick1.rssing.com/chan-17960721/latest.php
 
 http://linux-exynos.org/wiki/Main_Page
 
+http://web.archive.org/web/20200221004849/http://www.androidistica.com/2012/09/fxi-cotton-candy-goes-telefunken.html
+
 # Keywords
+Cotton Candy Rebranded As TELEFUNKEN Smart Stick
+Android 4.0.4 Pre 2013 12 11
+Linux 3.4.0-00624-ga0bc0b3
+ICS-beta1c-20121020.zip
+Ubuntu-alpha-20121019.zip
+http://download.cstick.com/
+CottonCandy-ICS-Lunde-20121013.img
+f98229a6a505a60aa3078fadf1a0910f cc_ubuntu_2014_01_28.img.zip
 Ubuntu-beta-20130309.zip
+044e4cfb67784893a94249b2636fe6d4 ubuntu-beta-20130131.zip
+4280149070001ab04deb134880a43844 ubuntu-20130131.img
+http://s3.amazonaws.com/ubuntu_test/cc_ubuntu_2014_01_28.img.zip
